@@ -34,7 +34,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish
-        run: yarn build && yarn changeset version --snapshot canary && yarn changeset publish --no-git-tag --snapshot
+        run: yarn build && yarn changeset version --snapshot canary && yarn changeset publish --tag canary --no-git-tag
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

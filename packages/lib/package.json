@@ -1,5 +1,5 @@
 {
-  "name": "cotontigeh-monorepo-test-test",
+  "name": "@cosmiccodelab/cotontigeh-monorepo-test-test",
   "version": "2.0.0",
   "description": "Vars injector for tailwindcss",
   "main": "./dist/index.js",

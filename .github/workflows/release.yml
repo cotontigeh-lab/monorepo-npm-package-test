@@ -25,18 +25,12 @@ jobs:
       - name: Install Dependencies
         run: yarn
 
-      - name: Generate version
-        run: |
-          yarn changeset version
-          echo "PACKAGE_VERSION=$(node -p "require('./packages/lib/package.json').version")" >> $GITHUB_ENV
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-
       - name: Create Release Pull Request
         id: changesets
         uses: changesets/action@v1
         with:
-          commit: Release ${{ env.PACKAGE_VERSION }}
+          title: Release VERSION_OF_RELEASE
+          commit: Release VERSION_OF_RELEASE
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 

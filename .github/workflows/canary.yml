@@ -56,8 +56,8 @@ jobs:
         env:
           PACKAGE_VERSION_BASE: ${{ env.PACKAGE_VERSION_BASE }}
 
-      # - name: Publish Canary Version
-      #   run: yarn changeset publish --tag canary
+      - name: Publish Canary Version
+        run: yarn changeset publish --tag canary
 
       - name: Create Release Tag
         id: create_release

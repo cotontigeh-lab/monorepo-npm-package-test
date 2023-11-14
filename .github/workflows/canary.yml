@@ -59,6 +59,14 @@ jobs:
       - name: Publish Canary Version
         run: yarn changeset publish --tag canary
 
+      - name: Install GitHub Changelog Generator
+        run: |
+          gem install github_changelog_generator
+
+      - name: Generate Changelog
+        run: |
+          github_changelog_generator -u ${{ github.repository_owner }} -p ${{ github.event.repository.name }} --token ${{ secrets.GH_PAT }}
+
       - name: Create Release Tag
         id: create_release
         uses: actions/create-release@v1
@@ -67,5 +75,6 @@ jobs:
         with:
           tag_name: ${{ env.PACKAGE_VERSION }}
           release_name: ${{ env.PACKAGE_VERSION }}
+          body_path: CHANGELOG.md
           draft: false
           prerelease: true

@@ -60,4 +60,4 @@ jobs:
           tag_name: ${{ env.PACKAGE_VERSION }}
           release_name: ${{ env.PACKAGE_VERSION }}
           draft: false
-          prerelease: true
+          prerelease: false

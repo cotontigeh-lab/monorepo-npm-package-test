@@ -1,5 +1,5 @@
 {
-  "name": "tailwindcss-vars-injector-repo",
+  "name": "cotontigeh-monorepo-test-repo",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -12,7 +12,8 @@
   "devDependencies": {
     "prettier": "^3.0.3",
     "tsconfig": "*",
-    "turbo": "^1.10.16"
+    "turbo": "^1.10.16",
+    "@changesets/cli": "^2.26.2"
   },
   "packageManager": "yarn@1.22.19",
   "workspaces": [

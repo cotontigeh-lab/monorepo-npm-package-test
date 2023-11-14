@@ -1,4 +1,4 @@
-import { tailwindcssVarsInjector } from "tailwindcss-vars-injector";
+import { tailwindcssVarsInjector } from "cotontigeh-monorepo-test";
 
 /* eslint-disable */
 /** @type {import('tailwindcss').Config} */

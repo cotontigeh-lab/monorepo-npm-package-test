@@ -1,5 +1,5 @@
 {
-  "name": "tailwindcss-vars-injector",
+  "name": "cotontigeh-monorepo-test",
   "version": "0.0.1",
   "description": "Vars injector for tailwindcss",
   "main": "./dist/index.js",

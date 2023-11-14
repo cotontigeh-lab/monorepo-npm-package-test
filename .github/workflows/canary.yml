@@ -53,8 +53,8 @@ jobs:
           "
           echo "PACKAGE_VERSION=$(node -p "require('./packages/lib/package.json').version")" >> $GITHUB_ENV
 
-      # - name: Publish Canary Version
-      #   run: yarn changeset publish --tag canary
+      - name: Publish Canary Version
+        run: yarn changeset publish --tag canary
 
       - name: Create Release Tag
         id: create_release

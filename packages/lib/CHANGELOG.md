@@ -1,5 +1,11 @@
 # cotontigeh-monorepo-test-test
 
+## 3.0.0
+
+### Major Changes
+
+- 030a3e2: poue
+
 ## 2.0.0
 
 ### Major Changes

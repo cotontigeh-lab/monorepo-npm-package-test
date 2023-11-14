@@ -2,7 +2,7 @@
   "name": "cotontigeh-monorepo-test-repo",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run build --filter=cotontigeh-monorepo-test-test",
     "dev": "turbo run dev",
     "gen": "turbo gen",
     "lint": "turbo run lint",

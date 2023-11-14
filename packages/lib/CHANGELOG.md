@@ -1,5 +1,11 @@
 # cotontigeh-monorepo-test-test
 
+## 7.0.0
+
+### Major Changes
+
+- 792adc3: dqefdesfd
+
 ## 6.0.0
 
 ### Major Changes

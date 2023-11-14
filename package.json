@@ -7,6 +7,7 @@
     "gen": "turbo gen",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "publish": "turbo run build lint && changeset publish",
     "postinstall": "husky install"
   },
   "devDependencies": {

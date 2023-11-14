@@ -31,6 +31,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
+      - name: Creating .npmrc
+        if: steps.changesets.outputs.hasChangesets == 'false'
+        run: |
+          cat << EOF > "$HOME/.npmrc"
+            //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          EOF
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Publish
         if: steps.changesets.outputs.hasChangesets == 'false'
         run: yarn build && yarn changeset publish

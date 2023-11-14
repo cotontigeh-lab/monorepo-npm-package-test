@@ -44,7 +44,7 @@ jobs:
         run: echo "::set-output name=version::$(node -p "require('./packages/lib/package.json').version")"
 
       - name: (EDIT PR) Update PR title
-        run: gh pr update ${{ steps.pr_number.outputs.number }} --title "Release ${{ steps.new_version.outputs.version }}"
+        run: gh pr edit ${{ steps.pr_number.outputs.number }} --title "Release ${{ steps.new_version.outputs.version }}"
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
 

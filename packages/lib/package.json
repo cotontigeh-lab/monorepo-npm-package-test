@@ -1,6 +1,6 @@
 {
   "name": "cotontigeh-monorepo-test-test",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "Vars injector for tailwindcss",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

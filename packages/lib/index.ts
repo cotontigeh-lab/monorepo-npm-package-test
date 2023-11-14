@@ -19,6 +19,7 @@ export function tailwindcssVarsInjector(
     addBase: (base: CSSRuleObject | CSSRuleObject[]) => void;
     theme: (path: string, defaultValue?: unknown) => string;
   }) {
+    console.log("test");
     const colorEntries = Object.entries(
       flattenColorPalette(theme("colors")),
     ).map(([key, val]) => [`--${config.prefix}-${key}`, val]);

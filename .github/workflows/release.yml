@@ -28,9 +28,6 @@ jobs:
       - name: Create Release Pull Request
         id: changesets
         uses: changesets/action@v1
-        with:
-          title: Release VERSION_OF_RELEASE
-          commit: Release VERSION_OF_RELEASE
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 

@@ -1,8 +1,10 @@
 {
   "name": "sample",
   "version": "0.1.0",
+  "private": true,
   "scripts": {
     "dev": "vite",
+    "build": "tsc && vite build",
     "serve": "vite preview",
     "test": "vitest",
     "test:ui": "vitest --ui",

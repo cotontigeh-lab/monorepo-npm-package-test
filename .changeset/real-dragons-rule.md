@@ -1,5 +1,5 @@
 ---
-"@cosmiccodelab/cotontigeh-monorepo-test-test": major
+"cotontigeh-monorepo-test-test": major
 ---
 
 poue

@@ -42,10 +42,19 @@ jobs:
       - name: Create Canary Version
         run: |
           yarn changeset version --snapshot canary
+
+      - name: Edit package.json
+        run: |
+          node -e "
+            const fs = require('fs');
+            const packageJson = JSON.parse(fs.readFileSync('./packages/lib/package.json', 'utf8'));
+            packageJson.version = packageJson.version.replace('0.0.0-canary', '2.0.0-canary');
+            fs.writeFileSync('./packages/lib/package.json', JSON.stringify(packageJson, null, 2));
+          "
           echo "PACKAGE_VERSION=$(node -p "require('./packages/lib/package.json').version")" >> $GITHUB_ENV
 
-      - name: Publish canary version
-        run: yarn changeset publish --tag canary
+      # - name: Publish Canary Version
+      #   run: yarn changeset publish --tag canary
 
       - name: Create Release Tag
         id: create_release

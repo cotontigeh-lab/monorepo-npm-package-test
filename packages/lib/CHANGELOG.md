@@ -1,5 +1,11 @@
 # cotontigeh-monorepo-test-test
 
+## 6.0.0
+
+### Major Changes
+
+- dbf753d: eekekeke
+
 ## 5.0.0
 
 ### Major Changes

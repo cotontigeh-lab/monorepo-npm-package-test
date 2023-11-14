@@ -25,12 +25,30 @@ jobs:
       - name: Install Dependencies
         run: yarn
 
+      # Create release PR
       - name: Create Release Pull Request
         id: changesets
         uses: changesets/action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
+      # EDIT PR
+      - name: (EDIT PR) Get PR number
+        id: pr_number
+        run: echo "::set-output name=number::$(gh pr view https://github.com/${{ github.repository }}/pull/${{ steps.changesets.outputs.pullRequestId }} --json number -q .number)"
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+
+      - name: (EDIT PR) Get new version of package
+        id: new_version
+        run: echo "::set-output name=version::$(node -p "require('./packages/lib/package.json').version")"
+
+      - name: (EDIT PR) Update PR title
+        run: gh pr update ${{ steps.pr_number.outputs.number }} --title "Release ${{ steps.new_version.outputs.version }}"
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+
+      # Publish Package if no changesets
       - name: Creating .npmrc
         if: steps.changesets.outputs.hasChangesets == 'false'
         run: |

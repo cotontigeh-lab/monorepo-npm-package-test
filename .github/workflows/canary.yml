@@ -56,11 +56,12 @@ jobs:
         env:
           PACKAGE_VERSION_BASE: ${{ env.PACKAGE_VERSION_BASE }}
 
-      - name: Publish Canary Version
-        run: yarn changeset publish --tag canary
+      # - name: Publish Canary Version
+      #   run: yarn changeset publish --tag canary
 
       - name: Install GitHub Changelog Generator
         run: |
+          echo "GEM_HOME=$RUNNER_WORKSPACE/.gem" >> $GITHUB_ENV
           gem install github_changelog_generator
 
       - name: Generate Changelog

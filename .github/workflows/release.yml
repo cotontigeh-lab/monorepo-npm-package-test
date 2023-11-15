@@ -81,7 +81,7 @@ jobs:
       #     tag_name: ${{ env.PACKAGE_VERSION }}
       #     release_name: ${{ env.PACKAGE_VERSION }}
       #     draft: false
-      #     prerelease: false
+      #      prerelease: false
 
       - name: Rebase and push
         # if: steps.changesets.outputs.hasChangesets == 'false'

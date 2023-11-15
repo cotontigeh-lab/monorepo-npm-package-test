@@ -90,6 +90,5 @@ jobs:
           git config --global user.email 'github-actions@github.com'
           git fetch origin
           git checkout canary
-          yarn
-          git rebase origin/main
+          git merge origin/main
           git push origin canary

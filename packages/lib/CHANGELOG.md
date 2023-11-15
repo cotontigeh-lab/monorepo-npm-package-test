@@ -1,5 +1,11 @@
 # cotontigeh-monorepo-test-test
 
+## 7.0.1
+
+### Patch Changes
+
+- e7f1a21: dfff
+
 ## 7.0.0
 
 ### Major Changes

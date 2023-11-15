@@ -84,7 +84,7 @@ jobs:
       #     prerelease: false
 
       - name: Rebase and push
-        if: steps.changesets.outputs.hasChangesets == 'false'
+        # if: steps.changesets.outputs.hasChangesets == 'false'
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'

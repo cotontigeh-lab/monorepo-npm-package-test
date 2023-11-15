@@ -1,11 +1,14 @@
-name: Linter
+name: Lint
 
 on:
   push:
     branches:
+      - canary
+      - develop
       - main
   pull_request:
     branches:
+      - main
       - canary
       - develop
 

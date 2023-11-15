@@ -90,5 +90,7 @@ jobs:
           git config --global user.email 'github-actions@github.com'
           git fetch origin
           git checkout canary
-          git merge origin/main
+          git rebase origin/main
+          git add yarn.lock
+          git commit -m "Resolve yarn.lock conflict"
           git push origin canary
